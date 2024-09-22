@@ -3,9 +3,9 @@
 git config --global pull.rebase false # probably only need this once
 git add . # Make sure you have changes added and committed
 git commit -m update
-git checkout -b anderson-spring-2024-main main
-git pull `git config --get remote.origin.url | awk -F \/ '{print $1}'`/data-301-student.git main
+git checkout -b anderson-fall-2024-main main
+git pull `git config --get remote.origin.url | awk -F \/ '{print $1}'`/anderson-fall-2024-classroom-csc-487-csc-487-student.git main
 ./fix_merge.sh
 git checkout main
-git merge --no-ff anderson-spring-2024-main -m fixed
+git merge --no-ff anderson-fall-2024-main -m fixed
 git push origin main
