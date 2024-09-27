@@ -22,11 +22,6 @@ from torch import nn
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 
-import numpy as np
-np.random.seed(1)
-c = np.random.rand(6,4)
-torch.manual_seed(1)
-
 device = (
     "cuda"
     if torch.cuda.is_available()
@@ -36,7 +31,9 @@ device = (
 )
 
 def test_exercise_1():
+    torch.manual_seed(1)
     model = py487.tutorials.NeuralNetwork().to(device)
+    torch.manual_seed(1)
     X = torch.rand(1, 28, 28, device=device)
     logits = model(X)
     pred_probab = nn.Softmax(dim=1)(logits)
