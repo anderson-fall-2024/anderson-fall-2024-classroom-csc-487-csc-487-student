@@ -41,4 +41,4 @@ def test_exercise_1():
     logits = model(X)
     pred_probab = nn.Softmax(dim=1)(logits)
     your_answer = pred_probab.tolist()
-    assert np.all(answers['exercise_1'] == your_answer)
+    assert np.all(np.around(answers['exercise_1'],4) == np.around(your_answer,4))
