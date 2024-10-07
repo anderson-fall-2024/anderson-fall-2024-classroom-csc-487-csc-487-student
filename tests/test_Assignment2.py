@@ -52,5 +52,5 @@ def test_exercise_5():
   A = torch.tensor([[1, 2], [3, 4]])
   B = torch.tensor([[5, 6], [7, 8]])
 
-  C = py487.functional.elementwise_addition(A,B)
+  C = py487.functional.matrix_multiply(A,B)
   assert torch.all(answers['exercise_5'] == C)
