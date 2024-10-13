@@ -1,5 +1,21 @@
 import torch
 
+import numpy as np
+
+def kl_div(input,target):
+    """
+    input: numpy.array of arbitrary shape in log-probabilities
+    target: numpy.array of the same shape as input (not in log-probabilities)
+    """
+    return 0
+
+def cross_entropy(input,target):
+    """
+    input: numpy.array of arbitrary shape in log-probabilities
+    target: numpy.array of the same shape as input (not in log-probabilities)
+    """
+    return 0
+
 def elementwise_addition(A: torch.Tensor, B: torch.Tensor) -> torch.Tensor:
     """
     Args:
