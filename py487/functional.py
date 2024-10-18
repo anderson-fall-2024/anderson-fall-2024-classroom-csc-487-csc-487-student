@@ -109,3 +109,5 @@ def minimize_gradient_descent_analytically(J_func,alpha,theta0,h,tol=1e-10,max_i
     """
     thetas = [theta0]
     return thetas
+
+# this is a test
